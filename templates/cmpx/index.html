@@ -1,16 +1,453 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Cmpx Markets</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <h1>Hello World!!</h1>
-        
-        <script src="" async defer></script>
-    </body>
-</html>
+{% extends "cmpx\base.html" %}
+
+{% load static %}
+
+{% block content %}
+    <title>Cmpx Markets</title>
+
+    <!--Header STARTS-->
+    <header class="masthead mb-0" style="background-image: url('static/pictures/backtop.jpg')">
+        <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-10">
+                        <div class="post-heading">
+                            <p><b>Your capital, Our Expertise</b></p>
+                            <h1><strong>The Market Awaits You</strong></h1>
+                            <div class="mt-3">
+                                <a href="#" type="button" class="btn btn-primary">Start Now!</a>
+                                <a href="#" type="button" class="btn btn-light">Learn More</a>
+                            </div>
+                            <div class="mt-3">
+                                <p><b>Funding for Professional Talent</b></p>
+                            </div>           
+                        </div>
+                    </div>
+                    <div class="col-lg-7 ms-0">
+                        <img src="{% static 'pictures/backnew.webp' %}" class="card-img" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header ENDS-->
+
+
+    <!--Trading View Widget STARTS-->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"></a>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+            "symbols": [
+                {
+                "proName": "FOREXCOM:SPXUSD",
+                "title": "S&P 500"
+                },
+                {
+                "proName": "FOREXCOM:NSXUSD",
+                "title": "US 100"
+                },
+                {
+                "proName": "FX_IDC:EURUSD",
+                "title": "EUR/USD"
+                },
+                {
+                "proName": "BITSTAMP:BTCUSD",
+                "title": "Bitcoin"
+                },
+                {
+                "proName": "BITSTAMP:ETHUSD",
+                "title": "Ethereum"
+                },
+                {
+                "description": "GBPUSD",
+                "proName": "FX:GBPUSD"
+                },
+                {
+                "description": "AUDUSD",
+                "proName": "OANDA:AUDUSD"
+                },
+                {
+                "description": "GBPJPY",
+                "proName": "OANDA:GBPJPY"
+                }
+            ],
+            "showSymbolLogo": true,
+            "colorTheme": "dark",
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "locale": "en"
+            }
+            </script>
+        </div>
+    </div>
+    <!--Trading View Widget ENDS-->
+
+
+    <!--Earn section STARTS-->
+    <div class="container-fluid pt-5 pb-5" style="background-color: #ECFFFF;">
+        <div class="row">
+            <div class="col-lg-7">
+                <img src="{% static 'pictures/earn.png' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-5">
+                <h1><b>Earn as a professional trader</b></h1>
+                <p>We have multiple programs to fit your expertise. Choose one of our programs and start trading, earn bonuses and profit-splits.</p>
+
+                <a href="#" type="button" class="btn btn-primary">Start now!</a>
+            </div>
+        </div>
+    </div>
+    <!--Earn section ENDS-->
+
+    <div class="container">
+        <hr>
+    </div>
+
+    <!--Experience section STARTS-->
+    <div class="container pt-5 pb-">
+        <div class="row">
+            <div class="col-lg-12 text-center mb-3">
+                <h1><b>What is your experience level?</b></h1>
+                <h6><b>Your success is our business.</b> We have chosen to provide you with multiple product options to choose from based on your experience. If you lose, we lose so choose carefully and pick the program that really fits your FOREX trading experience and your needs!</h6>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card text-white pt-3 ps-3 pb-3 h-100" style="background-color:#1ABCFF;">
+                            <div class="container text-center pt-3  pb-3">
+                                <h5 class="card-title"><b>Rapid</b></h5>
+                                <h6 class="card-subtitle mb-2">(Some experience)</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-white bg-info">Get to see how prop firms work</li>
+                                <li class="list-group-item text-white bg-info">Get paid as you gain experience</li>
+                                <li class="list-group-item text-white bg-info">Low entry cost</li>
+                                <li class="list-group-item text-white bg-info">Progress into a professional trader</li>
+                            </ul>
+                            <div class="container pt-3 pb-2 d-flex justify-content-center">
+                                <a type="button" class="btn text-white" href="#" style="background-color:#083871">Start now!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card text-white pt-3 ps-3 pb-3" style="background-color:#009EDE ;">
+                            <div class="container text-center pt-3  pb-3">
+                                <h5 class="card-title"><b>Evaluation</b></h5>
+                                <h6 class="card-subtitle mb-2">(Experience)</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-white" style="background-color:#009EDE;">Prove your experience with our <b>Evaluation</b> Account!</li>
+                                <li class="list-group-item text-white" style="background-color:#009EDE;">Quick 2 phase evaluation process</li>
+                                <li class="list-group-item text-white" style="background-color:#009EDE;">Generous drawdown limits</li>
+                                <li class="list-group-item text-white" style="background-color:#009EDE;">Profit split up to 85%</li>
+                            </ul>
+                            <div class="container pt-3 pb-2 d-flex justify-content-center">
+                                <a type="button" class="btn text-white" href="#" style="background-color:#083871">Start now!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card text-white pt-3 ps-3 pb-3" style="background-color:#045086;">
+                            <div class="container text-center pt-3  pb-3">
+                                <h5 class="card-title"><b>Accelerated</b></h5>
+                                <h6 class="card-subtitle mb-2">(Trades full time for a living)</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item text-white" style="background-color:#045086;">Get started immediately with our <b>Accelerated</b> Funding</li>
+                                <li class="list-group-item text-white" style="background-color:#045086;">Industry leading profit split</li>
+                                <li class="list-group-item text-white" style="background-color:#045086;">Speedy upscaling</li>
+                                <li class="list-group-item text-white" style="background-color:#045086;">Multiple sizes to choose from</li>
+                            </ul>
+                            <div class="container pt-3 pb-2 d-flex justify-content-center">
+                                <a type="button" class="btn text-white" href="#" style="background-color:#083871">Start now!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Experience section STARTS-->
+
+    <!--Sign up section STARTS-->
+    <div class="container mt-3 mb-3" id="sign">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="sign" style="text-decoration: none; color: black">Sign up for more information >></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Sign up section ENDS-->
+
+    <!--Program benefits section STARTS-->
+    <div class="container-fluid" id="benefits">
+        <div class="container" id="program">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="{% static 'pictures/program1.png' %}">
+                </div>
+                <div class="col-lg-8 col-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card curve d-flex justify-content-between mt-3 mb-3">
+                                    <div class="row">
+                                        <div class="col-lg-1 col-sm-12 align-self-center justify-content-center">
+                                            <i class="fa fa-bitcoin pro ps-3 justify-content-center"> </i>
+                                        </div>
+                                        <div class="col-lg-11 col-12">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Forex Academy</h5>
+                                                <p class="card-text">Learn about support &amp; resistance, risk management and more. Graduate to the semi-professional status (COMING SOON</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card curve d-flex justify-content-between mt-3 mb-3">
+                                    <div class="row">
+                                        <div class="col-lg-1 col-sm-12 align-self-center justify-content-center">
+                                            <i class="fa fa-bullseye pro ps-3 justify-content-center"> </i>
+                                        </div>
+                                        <div class="col-lg-11 col-12">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Pay once</h5>
+                                                <p class="card-text">Our programs are available in a one-time payment with no monthly recurring fees. Payment is simple and easy with credentials sent to you within 24 hours!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card curve d-flex justify-content-between mt-3 mb-3">
+                                    <div class="row">
+                                        <div class="col-lg-1 col-sm-12 align-self-center justify-content-center">
+                                            <i class="fa fa-users pro ps-3 justify-content-center"> </i>
+                                        </div>
+                                        <div class="col-lg-11 col-12">
+                                            <div class="card-body">
+                                                <h5 class="card-title">We are a community</h5>
+                                                <p class="card-text">Talk actively with us, our community and our fans on discord. We provide talks and information in real time to actively promote good behavior in trading. Join our discord and see what all the fuss is about!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card curve d-flex justify-content-between mt-3 mb-3">
+                                    <div class="row">
+                                        <div class="col-lg-1 col-sm-12 align-self-center justify-content-center">
+                                            <i class="fa fa-handshake pro ps-3 justify-content-center"> </i>
+                                        </div>
+                                        <div class="col-lg-11 col-12">
+                                            <div class="card-body">
+                                                <h5 class="card-title">We are always by your side</h5>
+                                                <p class="card-text">24/5 support is available to all our community, day or night we are there for you. Our interest co-align with your success. We are always there to assist when needed</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Program benefits section ENDS-->
+
+    <!--Blog setion STARTS-->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12 text-center mt-3 mb-3">
+                <h5><b>Latest from the blog</b></h6>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div class="container-fluid" id="blogs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="card mt-3 mb-3">
+                        <img src="{% static 'pictures/Stats-are-back-01.png' %}" class="card-img" alt="...">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card mt-3 mb-3">
+                        <img src="{% static 'pictures/Blackfriweek-100.jpg' %}" class="card-img" alt="...">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card mt-3 mb-3">
+                        <img src="{% static 'pictures/Interview-Irma-100.jpg' %}" class="card-img" alt="...">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="card mt-3 mb-3">
+                        <img src="{% static 'pictures/Interview-Kalai-Ram.png' %}" class="card-img" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Blog setion ENDS-->
+
+    <!--Testimonial section STARTS-->
+    <div class="container-fluid" id="testimonial">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <section id="testimonials" class="testimonials section-bg">
+                        <div class="container">
+                            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-item" data-aos="fade-up">
+                                            <p>
+                                            <i class="fa fa-quote-left"></i>
+                                            CMPX Markets is one of, if not THE, best prop firm i have found. I started trading them in Aug 2020, and have never had any issues getting paid. The one time it was "late" (only by a day or two because they were so new and growing rapidly), they gave me a little extra in my payout.
+                                            <br><br>
+                                            They have some of the best customer service in any industry. My questions are always answered completely and they like to have fun (joking around, buying pizza for the traders, etc.) Everyone is very helpful, but i end up talking to Ben K quite a bit of the time. Just a group of great people. Feels more like I am part of a family/group of friends than I am a trader for a company
+                                            <br><br>
+                                            Keep up the great work CMPXM! I'll be sticking around for a long time.
+                                            <i class="fa fa-quote-right"></i>
+                                            </p>
+                                            <img src="{% static 'pictures/erich.jpeg' %}" class="testimonial-img" alt="">
+                                            <h3>Eric H.</h3>
+                                        </div>
+                                    </div><!-- End testimonial item -->
+
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                                            <p>
+                                            <i class="fa fa-quote-left"></i>
+                                            I enjoy CMPXM... I came in as a new trader but i locked the funds to trade in the market, the best part is you get paid a percentage while in simulation phase! This is a great program with simple rules to follow as a trader. I have heard about other simpilar programs but have not thought to llok at them due to the face that i have had zero issues with CMPX Markets. Very fast responses from their team. I as a trader have hit my daily draw downs and the reset process is so simple that I am up and running with new account in 24hrs or less. Very friendly program from a beginner to advanced.
+                                            <i class="fa fa-quote-right"></i>
+                                            </p>
+                                            <img src="{% static 'pictures/danielr.jpeg' %}" class="testimonial-img" alt="">
+                                            <h3>Daniel R.</h3>
+                                        </div>
+                                    </div><!-- End testimonial item -->
+
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                                            <p>
+                                            <i class="fa fa-quote-left"></i>
+                                            I started CMPX Markets (CMPXM), when they started offering the accounts without any monthly subscription, i got my hands on 20k account, since then I only had good experience, I remember having a bad time while trading, and Ben (Customer support from CMPXM), he counselled me and helped me a lot psychologically. Basically people at CMPXM are not like a "BOSS" but more like a "TEAM". Anout the payout it is always on time, could be 1 day late, but they never seem to miss it. I have received my Payout through Transferwise.
+                                            <br><br>
+                                            Honestly, CMPXM has the bst Trading account Parameters with Excellent customer support, I recommend anyone to trade with them for a long-term growth in their career.
+                                            <i class="fa fa-quote-right"></i>
+                                            </p>
+                                            <img src="{% static 'pictures/anuragj.jpeg' %}" class="testimonial-img" alt="">
+                                            <h3>Anurag J.</h3>
+                                        </div>
+                                    </div><!-- End testimonial item -->
+
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+                                            <p>
+                                            <i class="fa fa-quote-left"></i>
+                                            I have been CMPXM since January 2021. CMPXM for me is a dream come true. Everything about CMPXM is excellent. Their support team is very helpful. I personally talk with Mr. Ben and get response as though we've met before. I have never seen such an understanding firm that treat new Traders with such high priority. CMPXM all the way till death do us part. 
+                                            <i class="fa fa-quote-right"></i>
+                                            </p>
+                                            <img src="{% static 'pictures/oduwaj.jpeg' %}" class="testimonial-img" alt="">
+                                            <h3>Oduwa J.</h3>
+                                        </div>
+                                    </div><!-- End testimonial item -->
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </section>
+                </div>
+                <div class="col-lg-6 col-12 text-center d-flex align-items-center">
+                    <div>
+                        <h2>Hear what people are saying about us!</h2>
+                        <hr>
+                        <p>At My Forex Funds we are always happy to hear about our prospective traders' insights, constructive criticism and feedback. We like to know where we can improve and grow with you. Take your time and see what others are saying about us and join our discord!</p>
+                        <div class="container">
+                            <a class="btn text-white" type="button" href="#" style="background-color:#090B47 ;">Contact Us</a>
+                            <a class="btn btn-light" type="button" href="#">join us on <i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Testimonial section ENDS-->
+
+    <!--Family section STARTS-->
+    <div class="container-fluid" id="family">
+        <div class="container text-white family py-5">
+            <div class="row">
+                <div class="col-lg-12 col-12 text-white text-center">
+                    <h2><b>Join our ever-growing family &amp; Earn</b></h2>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <img src="{% static 'pictures/1-2.png' %}" class="card-img" alt="...">
+                </div>
+                <div class="col-lg-4 col-12">
+                    <img src="{% static 'pictures/3-2.png' %}" class="card-img" alt="...">
+                </div>
+                <div class="col-lg-4 col-12">
+                    <img src="{% static 'pictures/2-2.png' %}" class="card-img" alt="...">
+                </div>
+                <div class="col-lg-12">
+                    <!-- ======= Counts Section ======= -->
+                    <section id="counts" class="counts">
+                        <div class="container">
+                            <div class="row counters">
+                                <div class="col-lg-4 col-6 col-12 text-center">
+                                    <span data-purecounter-start="10" data-purecounter-end="40000" data-purecounter-duration="1" 
+                                    data-purecounter-separator="true"
+                                    data-purecounter-currencysymbol="+"
+                                    class="purecounter">0+</span>
+                                    <p>Happy Traders</p>
+                                </div>
+
+                                <div class="col-lg-4 col-6 col-12 text-center">
+                                    <span data-purecounter-start="10000" data-purecounter-end="100000000000" data-purecounter-duration="1" 
+                                    data-purecounter-separator="true"
+                                    data-purecounter-currencysymbol="+"
+                                    class="purecounter">0+</span>
+                                    <p>Trading volume monthly</p>
+                                </div>
+
+                                <div class="col-lg-4 col-6 col-12 text-center">
+                                    <span data-purecounter-start="10" data-purecounter-end="120" data-purecounter-duration="1" 
+                                    data-purecounter-separator="true"
+                                    data-purecounter-currencysymbol="+"
+                                    class="purecounter">0+</span>
+                                    <p>different countries</p>
+                                </div>
+                            </div>
+                            <div class="container d-flex justify-content-center">
+                                <a class="btn btn-info" href="#" type="button">Start Now!</a>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Counts Section -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Family section ENDS-->
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- reference your installed Font Awesome Free package's files here -->
+        <link href="{% static 'fontawesome_free/css/fonts/all.min.css' %}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+        <link href="{% static 'css/swiper-bundle.min.css' %}" rel="stylesheet" type="text/css">
+        <script src="https://kit.fontawesome.com/f08892087d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--NAVBAR starts-->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0B1045;" id="mainNav" >
+        <div class="container">
+            <a class="navbar-brand text-white" href="{% url 'homepage' %}">CMPX Markets</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >Menu
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-1" style="color:white;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Programs
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                        
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link" href="#">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link btn btn-primary" href="#">Register now!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+        <!--NAVBAR ends-->
+
+        {% block content %}
+
+        {% endblock %}
+
+        <!--Footer STARTS-->
+        <div class="container-fluid" id="footer">
+            <div class="container text-white py-5">
+                <div class="row">
+                    <div class="col-lg-6 col-6">
+                        <p>CMPX Markets does not directly solicit customers from Canada. People who register for our programs do so at their own volition. MyForexFunds does not take into consideration your personal financial situation. If you require financial advice, it is recommended that you speak to a financial adviser or licensed professional. CMPX Markets does not act as or conduct services as a broker. CMPX Markets does not act as or conduct services as a custodian.</p>
+
+                        <p>Purchases of programs should not be considered deposits. All program fees are used for operation costs including, but not limited to, staff, technology and other business related expenses.</p>
+
+                        <p><strong>&copy; CMPX Markets 2022</strong></p>
+                    </div>
+                    <div class="col-lg-6 col-6">
+                        <div class="container">
+                            <ul>Programs
+                                <li>Rapid</li>
+                                <li>Evaluation</li>
+                                <li>Accelerated</li>
+                            </ul>
+                            <hr>
+                            <a href="#">llll</a>
+                            <hr>
+                            <a href="#">llll</a>
+                            <hr>
+                            <a href="#">llll</a>
+                            <hr>
+                        </div>
+
+                        <div class="container">
+                            <a href="#">llll</a>
+                        </div>
+                        <div class="container">
+                            <a href="#">llll</a>
+                        </div>
+                        <div class="container">
+                            <a href="#">llll</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer ENDS-->
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- reference your installed Font Awesome Free package's files here -->
+        <script src="{% static 'fontawesome_free/js/fonts/all.min.js' %}"></script>
+
+        <script src="{% static 'js/swiper-bundle.min.js' %}" type="application/javascript"></script>
+        <script src="{% static 'js/main.js' %}" type="application/javascript"></script>
+        <script src="{% static 'js/purecounter.js' %}" type="application/javascript"></script>
+    </body>
+</html>
