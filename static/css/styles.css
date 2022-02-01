@@ -242,8 +242,8 @@ header.masthead .post-heading .meta a {
     background-attachment: scroll;
     position: relative;
     background-size: cover;
-    background-image:  url('static/pictures/familybg.png');
-    opacity: 0.7;
+    /*background-image: url('/static/pictures/familybg.png');
+    opacity: 0.1;*/
 }
 
 /*--------------------------------------------------------------
@@ -276,4 +276,26 @@ header.masthead .post-heading .meta a {
 
 #footer div p {
     font-size: x-small;
+}
+
+#footer-links div a {
+    color: white;
+    text-decoration: none;
+    font-size: small;
+}
+
+#footer-links div ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#programs div.programs-overlay {
+    background-color: #07093C;
+    background-image: url('/static/pictures/programs.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    mix-blend-mode: multiply;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
