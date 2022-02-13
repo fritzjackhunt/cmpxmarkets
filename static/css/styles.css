@@ -1,3 +1,11 @@
+body {
+    box-sizing: border-box;
+}
+
+#top-header {
+    width: 100%;
+}
+
 .navbar-light 
 .navbar-nav 
 .nav-link:focus, 
@@ -9,8 +17,8 @@
 
 
 .px-7 {
-    padding-right: 6.2rem !important;
-    padding-left: 6.2rem !important;
+    padding-right: 20% !important;
+    padding-left: 20% !important;
 }
 
 .h-pic {
@@ -304,6 +312,15 @@ header.masthead .post-heading .meta a {
   
 .counts i {
     font-size: 40px;
+}
+
+@media (max-width: 768px) { 
+    .counts .counters span {
+        font-size: 24px;
+        display: block;
+        color: #16df7e;
+        font-weight: 700;
+    }
 }
 
 #footer {
